@@ -16,7 +16,8 @@ class IdleStore {
     this.PlayerMoney += this.increaseBy * this.MultiplyBy;
   };
   SuperDuperClick = () => {
-    this.PlayerMoney += this.increaseBy * this.MultiplyBy;
+    this.MultiplyBy += 1;
+    this.PlayerMoney -= 30;
   };
 }
 

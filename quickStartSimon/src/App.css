@@ -1,0 +1,23 @@
+.app {
+    width: 100vw;
+    height: 100vh;
+}
+
+.app__navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    height: 8%;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.app__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #404040;
+    color: #fff;
+    height: 92%;
+}

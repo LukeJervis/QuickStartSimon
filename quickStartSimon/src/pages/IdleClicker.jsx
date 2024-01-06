@@ -3,7 +3,7 @@ import { useRootStore } from "../stores/RootStoreProvider";
 
 const IdleClicker = () => {
     const {
-        IdleStore: { PlayerMoney, PlayerClick }
+        idleStore: { PlayerMoney, PlayerClick }
     } = useRootStore();
 
     return (

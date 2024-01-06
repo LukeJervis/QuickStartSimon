@@ -1,23 +1,21 @@
-import { createContext, useContext } from "react";
-import PropTypes from "prop-types";
+import React, { createContext, useContext } from "react";
 
 const StoreContext = createContext(undefined);
 
-export const useRootStore = () => {
-    const store = useContext(StoreContext);
-    if (!store) {
-        throw new Error("useStore must be used within a StoreProvider.");
+export function useRootStore() {
+    //Custom Hook -- use to access the context
+    const context = useContext(StoreContext); //Accepts context obj
+    if (context === undefined) {
+        throw new Error("useRootStore must be used within rootStoreProvider");
     }
-    return store;
-};
 
-export const RootStoreProvider = ({ store, children }) => {
+    return context;
+}
+
+export function RootStoreProvider({ children, RootStore }) {
+    const root = RootStore;
+
     return (
-        <StoreContext.Provider value={store}>{children}</StoreContext.Provider>
+        <StoreContext.Provider value={root}>{children}</StoreContext.Provider>
     );
-};
-
-RootStoreProvider.propTypes = {
-    store: PropTypes.object.isRequired,
-    children: PropTypes.node.isRequired
-};
+}

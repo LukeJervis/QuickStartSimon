@@ -1,6 +1,11 @@
+import { makeAutoObservable } from "mobx";
+
 class IdleStore {
+    rootStore = null;
+
     constructor(rootStore) {
         this.rootStore = rootStore;
+        makeAutoObservable(this);
     }
 
     PlayerMoney = 0;

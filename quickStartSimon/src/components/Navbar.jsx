@@ -15,11 +15,11 @@ const Navbar = () => {
                         Todo List
                     </Link>
                 </li>
-                {/* <li className="navbar__item">
+                <li className="navbar__item">
                     <Link to="/idle" className="navbar__link">
                         Idle
                     </Link>
-                </li> */}
+                </li>
                 <li className="navbar__item">
                     <Link to="/about" className="navbar__link">
                         About

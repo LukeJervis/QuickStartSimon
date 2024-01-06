@@ -1,5 +1,4 @@
 const About = () => {
-    console.log("About");
     return (
         <div className="about">
             <h1>About</h1>

@@ -19,11 +19,14 @@
 
 .navbar__link {
     text-decoration: none;
+    display: flex;
     color: #333;
     border: black 1px solid;
     border-radius: 5px;
     padding: 5px;
     background-color: rgb(210, 210, 210);
+    width: 6rem;
+    justify-content: center;
 }
 
 .navbar__link:hover {

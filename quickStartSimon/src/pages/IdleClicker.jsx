@@ -1,7 +1,7 @@
 import { observer } from "mobx-react";
 import { useRootStore } from "../stores/RootStoreProvider";
 
-export const IdleClicker = () => {
+const IdleClicker = () => {
     const {
         IdleStore: { PlayerMoney, PlayerClick }
     } = useRootStore();
@@ -14,3 +14,5 @@ export const IdleClicker = () => {
         </div>
     );
 };
+
+export default observer(IdleClicker);
